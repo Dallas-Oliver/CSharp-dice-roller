@@ -18,7 +18,7 @@ namespace DiceRoller
         {
             Dice die = new Dice(sidesValue);
 
-            Console.WriteLine(die.rollDie() + rollModifier(2)); 
+            Console.WriteLine($"you rolled a {die.rollDie() + rollModifier(-2)}"); 
         }
     
 
