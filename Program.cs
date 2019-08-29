@@ -1,23 +1,30 @@
 ﻿using System;
+using System.Linq;
 
 
-namespace ConsoleApp2
+namespace DiceRoller
 {
     class Program
     {
         static void Main(string[] args)
-        {
-            Dice die = new Dice(20);
-            for (int i = 0; i < 100; i++)
-            {
-
-            Console.WriteLine(die.rollDie());
-            }
-           
-
-
+        { 
+            numberOfDiceRolled(8, 1);
+  
             Console.ReadLine();
             
+        }
+
+        static void numberOfDiceRolled(int sidesValue, int number)
+        {
+            Dice die = new Dice(sidesValue);
+
+            Console.WriteLine(die.rollDie() + rollModifier(2)); 
+        }
+    
+
+        static int rollModifier(int modifierValue)
+        {
+            return modifierValue;
         }
 
     }
